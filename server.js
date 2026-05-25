@@ -24,7 +24,7 @@ app.get('/personagens', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {   //Procura por id
+app.get('/personagens/:id', (req, res) => {   //Procura por id
     const id = Number(req.params.id);
     const personagens = readData();
     const personagem = consultas.find(a => a.id === id);
